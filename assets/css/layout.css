@@ -1,0 +1,215 @@
+header {
+	--text: #000;
+	--text-inverse: #fff;
+	--background: transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	transition: background 250ms ease-in;
+	background: var(--background);
+	color: var(--text);
+}
+
+.top {
+	width: 100%;
+	height: 2rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.top-info {
+	width: auto;
+	height: 100%;
+	font-size: 1rem;
+	color: rgba(255, 255, 255, 0.8);
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.member-name {
+	width: auto;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	float: left;
+	color: var(--text);
+	padding: 0 1rem;
+	background: #feeabc;
+}
+
+ul.top-nav__list {
+	display: flex;
+	background: #dfa61e;
+}
+
+.top-nav__link {
+	--spacing: 1em;
+	display: flex;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	transition: 0.4s;
+	color: #fff;
+	height: 2rem;
+	align-items: center;
+	padding: 0 1rem;
+}
+
+.top-nav__link:hover {
+	color: var(--text);
+	background: #ffd36e;
+}
+
+.gnb {
+	width: 100%;
+	height: 5rem;
+	clear: both;
+}
+
+h1.main-logo {
+	width: auto;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	margin: 0;
+	float: left;
+}
+
+h1.main-logo img {
+	width: 80%;
+}
+
+.nav__list {
+	display: flex;
+	width: auto;
+	align-items: center;
+	float: right;
+}
+
+.nav__link {
+	--spacing: 0em;
+	display: flex;
+	text-transform: uppercase;
+	width: auto;
+	height: 5rem;
+	align-items: center;
+	margin: 0 2rem;
+	font-size: 1.25rem;
+	color: #000;
+	transition: all 0.24s;
+	position: relative;
+}
+
+.nav__link:hover {
+	color: #fff;
+}
+
+.nav__link:after {
+	content: "";
+	position: absolute;
+	bottom: 0.5rem;
+	left: var(--spacing);
+	right: var(--spacing);
+	height: 2px;
+	background: currentColor;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	transition: -webkit-transform 150ms ease-in-out;
+	transition: transform 150ms ease-in-out;
+	transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+.nav__link:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.top-search-wrap {
+	width: 300px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	position: relative;
+	float: left;
+	opacity: 0;
+	transition: all 250ms ease-in;
+}
+
+.top-search {
+	width: 50px;
+	height: 50px;
+	border: 0;
+	background: #fff;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	padding: 0 0 0 1.25rem;
+	font-size: 1rem;
+	-webkit-transition: width .4s ease;
+	-moz-transition: width .4s ease;
+	-ms-transition: width .4s ease;
+	-o-transition: width .4s ease;
+	transition: width .4s ease;
+}
+
+.top-search::placeholder {
+	font-size: 0;
+}
+
+.btn-top-search {
+	width: 50px;
+	height: 50px;
+	background: #fff url("/assets/images/main/icon-srch.png") 50% 50% no-repeat;
+	background-size: 20px;
+	text-indent: -9999px;
+	border: none;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	margin-top: -25px;
+	-webkit-transition: left .4s ease;
+	-moz-transition: left .4s ease;
+	-ms-transition: left .4s ease;
+	-o-transition: left .4s ease;
+	transition: left .4s ease;
+}
+
+.top-search-wrap:hover .top-search, .top-search-wrap:active .top-search, .top-search-wrap:focus .top-search {
+	width: 300px;
+}
+
+.top-search-wrap:hover .top-search::placeholder, .top-search-wrap:active .top-search::placeholder, .top-search-wrap:focus .top-search::placeholder {
+	font-size: inherit;
+}
+
+.top-search-wrap:hover .btn-top-search, .top-search-wrap:active .btn-top-search, .top-search-wrap:focus .btn-top-search {
+	left: 250px;
+}
+
+.nav-scrolled {
+  --text: #333;
+  --text-inverse: #f4f4f4;
+  --background: #fbb91d;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-scrolled .top-search-wrap {
+	opacity: 1;
+}
+
+main {
+	min-height: 200vh;
+}
+
+#container {
+	width: 100%;
+	min-height: 1080px;
+	z-index: 1;
+	background: #fff;
+	position: relative;
+}
