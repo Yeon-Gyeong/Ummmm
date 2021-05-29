@@ -30,7 +30,7 @@
 						    <a href="" class="top-nav__link">장바구니</a>
 						</li>
 						<li class="top-nav__item">
-						    <a href="" class="top-nav__link">마이페이지</a>
+						    <a href="/mypage" class="top-nav__link">마이페이지</a>
 						</li>
 						<?php }else{ ?>
 						<li class="top-nav__item">

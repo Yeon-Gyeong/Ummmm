@@ -65,7 +65,7 @@ class Login extends EC_Controller {
                 redirect('/');
 
             }else{
-                echo '<script>alert("아이디 혹은 비밀번호가 틀렸습니다.");</script>';
+                echo '<script>alert("아이디 혹은 비밀번호를 확인하세요.");</script>';
 
                 $this->view='login/login';
 

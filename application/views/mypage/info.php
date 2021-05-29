@@ -1,4 +1,4 @@
-<div style="margin-top: 200px;"><?php echo form_open(current_url());?>
+<?php echo form_open(current_url());?>
 
 아이디<input type="text" name="userid" value="<?php echo $view['info']['user_id']?>" readonly>
 비밀번호<input type="text" name="passwd" value="">
@@ -8,4 +8,3 @@
 <button type="button" id="editinfo">수정</button>
 
 <?php echo form_close();?>
-</div>
